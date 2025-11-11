@@ -40,7 +40,7 @@ dados <- base %>%
 ```
 
 ### 3. Visualização Gráfica da Varíavel
-Gráficos do PIB dessazonalizado:
+Gráfico do PIB dessazonalizado:
 ```r
 ggplot(data = dados, aes(x = data)) +
   geom_line(aes(y = pib, color = 'PIB'),
