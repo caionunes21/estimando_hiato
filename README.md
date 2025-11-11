@@ -2,10 +2,10 @@
 
 Autor: Caio Nunes     
 
-Instituição: FECAP — Curso de Economia
-
+Instituição: FECAP — Ciências Econômicas
 
 Período analisado: 1996–2025
+
 Fonte dos dados: Banco Central do Brasil (SGS = 22109)
 
 
