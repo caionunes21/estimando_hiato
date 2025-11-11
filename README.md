@@ -181,4 +181,4 @@ ggplot(data = dados, aes(x = data)) +
         axis.text = element_text(family = 'poppins', color = 'black', 
                                  size = 11))
 ```
-![Gráficos do PIB e Hiato do Produto(hiato_do_produto.png)]
+![Gráficos do PIB e Hiato do Produto](hiato_do_produto.png)
