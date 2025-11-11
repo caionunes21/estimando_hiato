@@ -67,16 +67,15 @@ ggplot(data = dados, aes(x = data)) +
 ```
 
 
-
+### 3. Estimação do PIB Potencial
 Estimando o PIB Potencial por Tendência Linear:
-Estimar o modelo para tendência linear
 ```r
 modelo <- lm(pib ~ data, data = dados)
 summary(modelo)
 trend_linear <- fitted.values(modelo)
 ```
 
-Visualização gráfica do hiato com tendência linear
+Visualização gráfica do Hiato do Produto
 ```r
 ggplot(data = dados, aes(x = data)) +
   geom_line(aes(y = pib, color = 'PIB'),
@@ -104,14 +103,13 @@ ggplot(data = dados, aes(x = data)) +
 
 
 Estimando o PIB Potencial por Tendência Quadrática:
-Estimar o modelo
 ```r
 modelo_quad <- lm(pib ~ poly(data, 2, raw = TRUE), data = dados)
 summary(modelo_quad)
 trend_quad <- fitted.values(modelo_quad)
 ```
 
-Visualização gráfica do hiato com tendência quadrática
+Visualização gráfica do Hiato do Produto
 ```r
 ggplot(data = dados, aes(x = data)) +
   geom_line(aes(y = pib, color = 'PIB'), 
@@ -142,11 +140,12 @@ ggplot(data = dados, aes(x = data)) +
 ```
 
 Estimando o PIB Potencial pelo Filtro HP:
-Estimar o modelo com mFilter (lambda = 1600)
 ```r
 hp <- hpfilter(dados$pib, freq = 1600)
 trend_hp <- hp$trend
 ```
+Estimar o modelo com mFilter (lambda = 1600)
+
 
 Visualização gráfica do hiato com Filtro HP
 ```r
