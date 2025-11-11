@@ -8,6 +8,8 @@ Fonte dos dados: Banco Central do Brasil (SGS = 22109)
 
 ## 📊 Objetivo
 Este projeto tem como objetivo estimar o hiato do produto para a economia brasileira, utilizando diferentes métodos de cálculo do PIB potencial.
+O hiato do produto mede a diferença entre o PIB Efetivo e o PIB Potencial em uma economia, indicando momentos com pressões inflacionárias e deflacionárias.
+
 Os modelos explorados incluem:
  - Tendência Linear
  - Tendência QUadrática
@@ -37,8 +39,8 @@ dados <- base %>%
   as_tsibble(index = data)
 ```
 
-### 3. Visualização Gráfica da Variável Principal
-Gráficos do PIB a preços de mercado dessazonalizados:
+### 3. Visualização Gráfica da Varíavel
+Gráficos do PIB dessazonalizado:
 ```r
 ggplot(data = dados, aes(x = data)) +
   geom_line(aes(y = pib, color = 'PIB'),
@@ -74,7 +76,7 @@ summary(modelo)
 trend_linear <- fitted.values(modelo)
 ```
 
-Visualização gráfica do Hiato com tendência linear
+Visualização gráfica do hiato com tendência linear
 ```r
 ggplot(data = dados, aes(x = data)) +
   geom_line(aes(y = pib, color = 'PIB'),
