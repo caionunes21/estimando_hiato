@@ -69,7 +69,6 @@ ggplot(data = dados, aes(x = data)) +
                                  size = 11))
 ```
 
-
 ### 3. Estimação do PIB Potencial
 Estimando o PIB Potencial por Tendência Linear:
 ```r
@@ -182,3 +181,4 @@ ggplot(data = dados, aes(x = data)) +
         axis.text = element_text(family = 'poppins', color = 'black', 
                                  size = 11))
 ```
+![Gráficos PIB Dessazonalizado](ipca_componentes.png)
