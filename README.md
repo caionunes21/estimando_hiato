@@ -15,7 +15,7 @@ O hiato do produto mede a diferença entre o PIB Efetivo e o PIB Potencial em um
 
 Os modelos explorados incluem:
  - Tendência Linear
- - Tendência QUadrática
+ - Tendência Quadrática
  - Filtro HP
 
 
